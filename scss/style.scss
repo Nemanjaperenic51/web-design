@@ -1,0 +1,290 @@
+@import "var";
+@import "base";
+@import "mixins";
+
+
+/***************************************************
+****************************************************
+****************************************************
+****************************************************
+                H E A D E R
+****************************************************
+****************************************************
+****************************************************
+****************************************************/
+header {
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(../img/header.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    nav {
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 50px;
+        align-items: center;
+        box-shadow: 3px 0 6px $black;
+
+        .logo {
+            text-decoration: none;
+            font-size: 2rem;
+            color: $textColor;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            li {
+                margin-left: 30px;
+                 a {
+                    text-decoration: none;
+                    font-size: 1.4rem;
+                    color: $textColor;
+                    text-transform: uppercase;
+                    transition: .4s linear;
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+            }
+
+           
+        }
+    }
+    hgroup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            color: $white;
+            text-shadow: $textShadow;
+            letter-spacing: 2.5px;
+            animation: animation;
+            animation-duration: 1s;
+        }
+
+        @keyframes animation {
+            from {
+                transform: translateY(-300%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+/***************************************************
+****************************************************
+****************************************************
+****************************************************
+                A B O U  T 
+****************************************************
+****************************************************
+****************************************************
+****************************************************/
+.about {
+    padding: $padding;
+
+  & >  h1 {
+        text-align: center;
+        color: $textColor;
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-style: italic;
+
+        &::after {
+            content: "";
+            display: block;
+            margin: 20px auto;
+            height: 5px;
+            width: 10%;
+            background: $primary
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 45% !important;
+
+        article {
+            flex: 0 0 48%;
+            margin: 10px 0;
+            background: $white;
+            box-shadow: $boxShadow;
+
+            h1 {
+                font-size: 1.4rem;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            p {
+                padding: 4.5%;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+/***************************************************
+****************************************************
+****************************************************
+****************************************************
+                C O N T A C T
+****************************************************
+****************************************************
+****************************************************
+****************************************************/
+.contact {
+    background: $primary;
+    padding: $padding;
+    h1 {
+        text-align: center;
+        color: $white;
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-style: italic;
+
+        &::after {
+            content: "";
+            display: block;
+            margin: 20px auto;
+            height: 5px;
+            width: 10%;
+            background: $secondary
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        input[type = "text"],textarea {
+            border: 0;
+            background: transparent;
+            color: $white;
+            text-align: center;
+            font-size: 1.4rem;
+            border: 1px solid $inputColor;
+            width: 300px;
+            padding: 10px ;
+            border-radius: 2em;
+            margin: 20px 0;
+            outline: none;
+            resize: none;
+            transition: .6s;
+
+            &:focus {
+                width: 400px;
+            }
+        }
+
+        textarea {
+            height: 200px;
+        }
+        input[type = "submit"] {
+            border: 0;
+            background: transparent;
+            color: $white;
+            text-align: center;
+            font-size: 1.1rem;
+            border: 1px solid $inputColor;
+            
+            padding: 10px 20px;
+            border-radius: 2em;
+            margin: 20px 0;
+            outline: none;
+            
+            transition: .6s;
+
+            &:hover {
+                background: $worksColor
+            }
+        }
+
+    }
+}
+
+/***************************************************
+****************************************************
+****************************************************
+****************************************************
+                W O R K S
+****************************************************
+****************************************************
+****************************************************
+****************************************************/
+.works {
+    padding:$padding;
+    & >  h1 {
+        text-align: center;
+        color: $textColor;
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-style: italic;
+
+        &::after {
+            content: "";
+            display: block;
+            margin: 20px auto;
+            height: 5px;
+            width: 10%;
+            background: $primary
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        article {
+            flex: 0 0 31%;
+            position: relative;
+            margin: 15px 0;
+
+            img {
+                width: 100%;
+                height: 400px; 
+            }
+
+            h2 {
+                position: absolute;
+                top:10px;
+                left: 20px;
+                background: $worksColor;
+                padding: 10px 15px;
+                border-radius: 2em;
+            }
+        }
+    }
+}
+
+/***************************************************
+****************************************************
+****************************************************
+****************************************************
+                F O O T E R
+****************************************************
+****************************************************
+****************************************************
+****************************************************/
+
+footer {
+    background: $primary;
+    color: $white;
+    font-size: 2rem;
+    padding: 50px;
+    text-align: center;
+}

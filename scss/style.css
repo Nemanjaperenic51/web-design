@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background: #ececec;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/***************************************************
+****************************************************
+****************************************************
+****************************************************
+                H E A D E R
+****************************************************
+****************************************************
+****************************************************
+****************************************************/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header.jpg);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+header nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+  align-items: center;
+  box-shadow: 3px 0 6px #000;
+}
+header nav .logo {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #6b6b6b;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li {
+  margin-left: 30px;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #6b6b6b;
+  text-transform: uppercase;
+  transition: 0.4s linear;
+}
+header nav ul li a:hover {
+  color: #95d5b2;
+}
+header hgroup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header hgroup h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 0 4px #000;
+  letter-spacing: 2.5px;
+  animation: animation;
+  animation-duration: 1s;
+}
+@keyframes animation {
+  from {
+    transform: translateY(-300%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/***************************************************
+****************************************************
+****************************************************
+****************************************************
+                A B O U  T 
+****************************************************
+****************************************************
+****************************************************
+****************************************************/
+.about {
+  padding: 100px 0;
+}
+.about > h1 {
+  text-align: center;
+  color: #6b6b6b;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-style: italic;
+}
+.about > h1::after {
+  content: "";
+  display: block;
+  margin: 20px auto;
+  height: 5px;
+  width: 10%;
+  background: #2d6a4f;
+}
+.about .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 45% !important;
+}
+.about .container article {
+  flex: 0 0 48%;
+  margin: 10px 0;
+  background: #fff;
+  box-shadow: 0 0 10px #6b6b6b;
+}
+.about .container article h1 {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 20px 0;
+}
+.about .container article p {
+  padding: 4.5%;
+  line-height: 1.4;
+}
+
+/***************************************************
+****************************************************
+****************************************************
+****************************************************
+                C O N T A C T
+****************************************************
+****************************************************
+****************************************************
+****************************************************/
+.contact {
+  background: #2d6a4f;
+  padding: 100px 0;
+}
+.contact h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-style: italic;
+}
+.contact h1::after {
+  content: "";
+  display: block;
+  margin: 20px auto;
+  height: 5px;
+  width: 10%;
+  background: #95d5b2;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact form input[type=text], .contact form textarea {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  border: 1px solid #b7e4c7;
+  width: 300px;
+  padding: 10px;
+  border-radius: 2em;
+  margin: 20px 0;
+  outline: none;
+  resize: none;
+  transition: 0.6s;
+}
+.contact form input[type=text]:focus, .contact form textarea:focus {
+  width: 400px;
+}
+.contact form textarea {
+  height: 200px;
+}
+.contact form input[type=submit] {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+  border: 1px solid #b7e4c7;
+  padding: 10px 20px;
+  border-radius: 2em;
+  margin: 20px 0;
+  outline: none;
+  transition: 0.6s;
+}
+.contact form input[type=submit]:hover {
+  background: #94d2bdce;
+}
+
+/***************************************************
+****************************************************
+****************************************************
+****************************************************
+                W O R K S
+****************************************************
+****************************************************
+****************************************************
+****************************************************/
+.works {
+  padding: 100px 0;
+}
+.works > h1 {
+  text-align: center;
+  color: #6b6b6b;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-style: italic;
+}
+.works > h1::after {
+  content: "";
+  display: block;
+  margin: 20px auto;
+  height: 5px;
+  width: 10%;
+  background: #2d6a4f;
+}
+.works .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.works .container article {
+  flex: 0 0 31%;
+  position: relative;
+  margin: 15px 0;
+}
+.works .container article img {
+  width: 100%;
+  height: 400px;
+}
+.works .container article h2 {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background: #94d2bdce;
+  padding: 10px 15px;
+  border-radius: 2em;
+}
+
+/***************************************************
+****************************************************
+****************************************************
+****************************************************
+                F O O T E R
+****************************************************
+****************************************************
+****************************************************
+****************************************************/
+footer {
+  background: #2d6a4f;
+  color: #fff;
+  font-size: 2rem;
+  padding: 50px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
